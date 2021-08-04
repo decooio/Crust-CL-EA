@@ -13,6 +13,7 @@
     "@crustio/type-definitions": "^0.0.10",
     "@polkadot/api": "^4.16.2",
     "dotenv": "^10.0.0",
+    "form-data": "^4.0.0",
     "ipfs-http-client": "^51.0.1"
   },
   "devDependencies": {

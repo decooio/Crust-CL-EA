@@ -4,7 +4,7 @@ External Adapter to pin file to Crust network
 
 ## Input Params
 - `cid`: IPFS CID of file to store to crust. This is required.
-- `hostNodes`: Multiaddresses of IPFS nodes the file is already stored on. This is optional, but providing this could accelerate processing speed of the pinning process.
+- `hostNode`: Multiaddress of IPFS node the file is already stored on. This is optional, but providing this could accelerate processing speed of the pinning process.
 - `ipfsPinHost`: Ipfs host to pin the file before placing order to Crust network. This should be provided by Oracle node. If not provided, 'https://crustwebsites.net' will be used.
 - `crustNodeUrl`: Crust node to send place order request to. If not passed, 'wss://rocky-api.crust.network' will be used.
 - `crustOrderSeeds`: Private seeds of the Crust account to send the place-order transaction.
