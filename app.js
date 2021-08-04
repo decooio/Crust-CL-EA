@@ -1,3 +1,6 @@
+
+require('dotenv').config()
+
 const createRequest = require('./index').createRequest
 
 const express = require('express')

@@ -1,5 +1,5 @@
 {
-  "name": "EA-NodeJS-Template",
+  "name": "crust-cl-ea",
   "version": "0.1.0",
   "author": "",
   "description": "",
@@ -9,7 +9,11 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "@chainlink/external-adapter": "^0.2.3"
+    "@chainlink/external-adapter": "^0.2.6",
+    "@crustio/type-definitions": "^0.0.10",
+    "@polkadot/api": "^4.16.2",
+    "dotenv": "^10.0.0",
+    "ipfs-http-client": "^51.0.1"
   },
   "devDependencies": {
     "body-parser": "^1.19.0",

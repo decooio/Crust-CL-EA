@@ -1,44 +1,26 @@
-# Chainlink NodeJS External Adapter Template
+# Crust Chainlink External Adapter
 
-This template provides a basic framework for developing Chainlink external adapters in NodeJS. Comments are included to assist with development and testing of the external adapter. Once the API-specific values (like query parameters and API key authentication) have been added to the adapter, it is very easy to add some tests to verify that the data will be correctly formatted when returned to the Chainlink node. There is no need to use any additional frameworks or to run a Chainlink node in order to test the adapter.
-
-## Creating your own adapter from this template
-
-Clone this repo and change "ExternalAdapterProject" below to the name of your project
-
-```bash
-git clone https://github.com/thodges-gh/CL-EA-NodeJS-Template.git ExternalAdapterProject
-```
-
-Enter into the newly-created directory
-
-```bash
-cd ExternalAdapterProject
-```
-
-You can remove the existing git history by running:
-
-```bash
-rm -rf .git
-```
-
-See [Install Locally](#install-locally) for a quickstart
+External Adapter to pin file to Crust network
 
 ## Input Params
+- `cid`: IPFS CID of file to store to crust. This is required.
+- `hostNodes`: Multiaddresses of IPFS nodes the file is already stored on. This is optional, but providing this could accelerate processing speed of the pinning process.
+- `ipfsPinHost`: Ipfs host to pin the file before placing order to Crust network. This should be provided by Oracle node. If not provided, 'https://crustwebsites.net' will be used.
+- `crustNodeUrl`: Crust node to send place order request to. If not passed, 'wss://rocky-api.crust.network' will be used.
+- `crustOrderSeeds`: Private seeds of the Crust account to send the place-order transaction.
 
-- `base`, `from`, or `coin`: The symbol of the currency to query
-- `quote`, `to`, or `market`: The symbol of the currency to convert to
 
 ## Output
 
 ```json
 {
- "jobRunID": "278c97ffadb54a5bbb93cfec5f7b5503",
- "data": {
-  "USD": 164.02,
-  "result": 164.02
- },
- "statusCode": 200
+ "jobRunID": "1",
+  "data": {
+    "Pins": [ "QmX7gkeWYuDUjRPpgLhUNX9MGzVMYqfqQypKQnht8Qf27P" ],
+    "result": "QmX7gkeWYuDUjRPpgLhUNX9MGzVMYqfqQypKQnht8Qf27P"
+  },
+  "result": "QmX7gkeWYuDUjRPpgLhUNX9MGzVMYqfqQypKQnht8Qf27P",
+  "statusCode": 200
 }
 ```
 
